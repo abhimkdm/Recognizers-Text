@@ -2323,9 +2323,7 @@
     ]
   },
   {
-    "Input": "نقاطه تساوي 5000 أو أكثر ",
-    "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "Input": "نقاطه تساوي 5000 أو أكثر",
     "Results": [
       {
         "Text": "تساوي 5000 أو أكثر",
@@ -2334,8 +2332,8 @@
           "value": "[5000,)",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 6,
+        "End": 23
       }
     ]
   },
@@ -2429,8 +2427,7 @@
   },
   {
     "Input": "نقاطه تساوي 5000 أو أقل من 5000",
-    "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "NotSupported": "javascript, python",
     "Results": [
       {
         "Text": "تساوي 5000",
@@ -2439,8 +2436,8 @@
           "value": "[5000,5000]",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 6,
+        "End": 15
       },
       {
         "Text": "أقل من 5000",
@@ -2719,8 +2716,8 @@
   },
   {
     "Input": "تخطط شركة نيسان موتور لخفض ما يصل إلى 700 عامل متعاقد.",
-    "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "IgnoreResolution": true,
+    "NotSupported": "javascript, python",
     "Results": [
       {
         "Text": "يصل إلى 700",
@@ -2729,8 +2726,8 @@
           "value": "(,700]",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 30,
+        "End": 40
       }
     ]
   },
