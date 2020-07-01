@@ -175,9 +175,9 @@ NumberWithPrepositionPercentage: !nestedRegex
 TillRegex: !simpleRegex
   def: (الى|إلى|خلال|--|-|—|——|~|–)
 MoreRegex: !simpleRegex
-  def: (?:(اكثر|فوق|أكبر|أعظم|أطول|يتجاوز|تفوق|أعلى|أكثر)|(?<!<|=)>)
+  def: (?:(اكثر|فوق|أكبر|أعظم|أطول|يتجاوز|تفوق|أعلى|أكثر|على الأقل)|(?<!<|=)>)
 LessRegex: !simpleRegex
-  def: (?:(أقل|اقل|اصغر|أصغر|أخفض|ادنى|يصل إلى)(\s*من)?|تحت|(?<!>|=)<)
+  def: (?:(على الأكثر|أقل|اقل|اصغر|أصغر|أخفض|ادنى|يصل إلى)(\s*من)?|تحت|(?<!>|=)<)
 EqualRegex: !simpleRegex
   def: (يساوي|تساوي| تساوي|(?<!<|>)=)
 MoreOrEqualPrefix: !nestedRegex
@@ -645,5 +645,3 @@ RelativeReferenceRelativeToMap: !dictionary
     الثانية الى الاخير: end
     السابق: current    
 ...
-
-
