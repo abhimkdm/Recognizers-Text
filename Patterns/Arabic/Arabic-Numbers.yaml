@@ -33,7 +33,7 @@ SeparaIntRegex: !nestedRegex
       RoundNumberIntegerRegex
     ]
 AllIntRegex: !nestedRegex
-  def: (?:({SeparaIntRegex})((\s+(و)?)({SeparaIntRegex})(\s+{RoundNumberIntegerRegex})?)*|((({TenToNineteenIntegerRegex}|({TensNumberIntegerRegex}(\s+(و)?|\s*-\s*){ZeroToNineIntegerRegex})|{TensNumberIntegerRegex}|{ZeroToNineIntegerRegex})?(\s+{RoundNumberIntegerRegex})+)\s+(و)?)*{SeparaIntRegex})
+  def: (?:({SeparaIntRegex})((\s+(و)?(\s+)?)({SeparaIntRegex})(\s+{RoundNumberIntegerRegex})?)*|((({TenToNineteenIntegerRegex}|({TensNumberIntegerRegex}(\s+(و)?|\s*-\s*){ZeroToNineIntegerRegex})|{TensNumberIntegerRegex}|{ZeroToNineIntegerRegex})?(\s+{RoundNumberIntegerRegex})+)\s+(و)?)*{SeparaIntRegex})
   references:
     [
       TenToNineteenIntegerRegex,
@@ -645,5 +645,7 @@ RelativeReferenceRelativeToMap: !dictionary
     الثانية الى الاخير: end
     السابق: current    
 ...
+
+
 
 

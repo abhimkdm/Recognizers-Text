@@ -1661,12 +1661,13 @@
   {
     "Input": "هذاك جيد حقا.",
     "NotSupportedByDesign": "javascript, java, python",
+    "NotSupported": "dotnet",
     "Results": []
   },
   {
     "Input": "في بعض البلدان تستطيع ان تكتب ٥.٠٠ او ٥,٠٠",
-    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
+    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "٥.٠٠",
@@ -3338,7 +3339,6 @@
     "Input": "مائة و ستة عشر",
     "Comment": "PendingValidation",
     "NotSupportedByDesign": "javascript,python,java",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "مائة و ستة عشر",
@@ -3822,7 +3822,6 @@
     "Input": "مائتان و اثنان ألف",
     "Comment": "PendingValidation",
     "NotSupportedByDesign": "javascript,python,java",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "مائتان و اثنان ألف",
@@ -4591,9 +4590,9 @@
   },
   {
     "Input": "مائة و اثنان و ثلاثون خمس",
+    "IgnoreResolution": true,
     "Comment": "PendingValidation",
     "NotSupportedByDesign": "javascript,python,java",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "مائة و اثنان و ثلاثون خمس",
@@ -4647,7 +4646,6 @@
     "Input": "واحد من مائة و خمسة",
     "Comment": "PendingValidation",
     "NotSupportedByDesign": "javascript,python,java",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "واحد من مائة و خمسة",
@@ -4665,7 +4663,6 @@
     "Input": "مائة من ألف و خمسة",
     "Comment": "PendingValidation",
     "NotSupportedByDesign": "javascript,python,java",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "مائة من ألف و خمسة",
@@ -4836,7 +4833,6 @@
     "Input": "واحد على مائة و خمسة و عشرون",
     "Comment": "PendingValidation",
     "NotSupportedByDesign": "javascript,python,java",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "واحد على مائة و خمسة و عشرون",
