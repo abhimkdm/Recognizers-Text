@@ -3584,8 +3584,8 @@
   },
   {
     "Input": "رأيتُ مائتين واثنتي ألف طاولة",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "مائتين واثنتي ألف",
@@ -3855,8 +3855,8 @@
   },
   {
     "Input": "قابلنا اثنتي عشرة مهندسة اللاتي خرجن",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "اثنتي عشرة",
@@ -4235,8 +4235,8 @@
   },
   {
     "Input": " سيتم التعرف على ٤٢٣ ٠٠٠٠  بصفة رقمين ",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "٤٢٣",
@@ -4245,8 +4245,8 @@
           "subtype": "integer",
           "value": "423"
         },
-        "Start": 16,
-        "End": 18
+        "Start": 17,
+        "End": 19
       },
       {
         "Text": "٠٠٠٠",
@@ -4255,8 +4255,8 @@
           "subtype": "integer",
           "value": "0"
         },
-        "Start": 20,
-        "End": 23
+        "Start": 21,
+        "End": 24
       }
     ]
   },
