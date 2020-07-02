@@ -2328,7 +2328,7 @@
   {
     "Input": "نقاطه تساوي 5000 أو أكثر ",
     "Comment": "PendingValidation",
-    "NotSupported": "dotnet",
+    "NotSupported": "javascript, python, dotnet",
     "Results": [
       {
         "Text": "تساوي 5000 أو أكثر",
