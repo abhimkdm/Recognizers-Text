@@ -117,8 +117,8 @@
   },
   {
     "Input": "التفاحات على الأكثر ١٠٠ وعلى الأقل ٢٠",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "java, javascript, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "على الأكثر ١٠٠ وعلى الأقل ٢٠",
@@ -149,8 +149,8 @@
   },
   {
     "Input": "الرقم ما بين ٢٠ و١٠٠.",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "java, javascript, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "ما بين ٢٠ و١٠٠",
@@ -166,7 +166,6 @@
   {
     "Input": "الرقم المطلوب هو من ألف الى ألف خمس مائة",
     "NotSupportedByDesign": "java, javascript, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "من ألف الى ألف خمس مائة",
@@ -212,8 +211,8 @@
   },
   {
     "Input": "التتيجة  أكبر من او يساوي ثلاثة آلاف وتسع مائة و خمس وستون",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "java, javascript, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "أكبر من او يساوي ثلاثة آلاف وتسع مائة و خمس وستون",
@@ -291,8 +290,8 @@
   },
   {
     "Input": "فيه خمس مائة وأكثر منتجات",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "java, javascript, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "خمس مائة وأكثر",
@@ -308,7 +307,6 @@
   {
     "Input": "خمس مائة  أو أكثر",
     "NotSupportedByDesign": "java, javascript, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "خمس مائة  أو أكثر",
@@ -372,7 +370,6 @@
   {
     "Input": "المبلغ المطلوب خمس مائة او أقل",
     "NotSupportedByDesign": "java, javascript, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "خمس مائة او أقل",
