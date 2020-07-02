@@ -2189,8 +2189,8 @@
   },
   {
     "Input": "٤ آلاف ٣ مائة و ٠ رقمان صالحان",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "٤ آلاف ٣ مائة",
@@ -2243,8 +2243,8 @@
   },
   {
     "Input": "٣ مائة و ٢,١٢ مائة رقمان صالحان",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "٣ مائة",
@@ -3055,8 +3055,8 @@
   },
   {
     "Input": "مائتان فاصلة صفر ثلاثة",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "مائتان فاصلة صفر ثلاثة",
@@ -3602,8 +3602,8 @@
   },
   {
     "Input": "مائتين فاصلة صفر ثلاثة",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "مائتين فاصلة صفر ثلاثة",
