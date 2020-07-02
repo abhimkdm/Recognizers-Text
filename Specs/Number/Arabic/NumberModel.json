@@ -3551,7 +3551,6 @@
   {
     "Input": "اشتريتُ طاولتين اثنتين",
     "NotSupportedByDesign": "javascript, java, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "اثنتين",
@@ -3567,8 +3566,8 @@
   },
   {
     "Input": "رأيتُ اثنتين و خمسين بنتا",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "اثنتين و خمسين",
@@ -3635,8 +3634,8 @@
   },
   {
     "Input": "مائة واثنتين وثلاثين على خمس",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "مائة واثنتين وثلاثين على خمس",
@@ -3855,7 +3854,6 @@
   },
   {
     "Input": "قابلنا اثنتي عشرة مهندسة اللاتي خرجن",
-    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
     "Results": [
       {
