@@ -117,8 +117,8 @@
   },
   {
     "Input": "التفاحات على الأكثر ١٠٠ وعلى الأقل ٢٠",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "java, javascript, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "على الأكثر ١٠٠ وعلى الأقل ٢٠",
