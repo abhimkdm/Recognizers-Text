@@ -1300,7 +1300,6 @@
   {
     "Input": "هذا الرقم هو أعلى أو يساوي مائة أو أقل أو يساوي ثلاثمائة",
     "NotSupportedByDesign": "java, javascript, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "أعلى أو يساوي مائة أو أقل أو يساوي ثلاثمائة",
@@ -1490,8 +1489,8 @@
   },
   {
     "Input": "درجته تساوي ٥٠٠٠ أو اكثر من ٤٥٠٠",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "java, javascript, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "تساوي ٥٠٠٠",
@@ -1643,8 +1642,9 @@
   },
   {
     "Input": "هذا العدد أكبر من عشرين و أقل من أو يساوي خمسة و ثلاثين.",
+    "IgnoreResolution": true,
     "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "NotSupported": "javascript, python",
     "Results": [
       {
         "Text": "أكبر من عشرين و أقل من أو يساوي خمسة و ثلاثين",
@@ -1654,7 +1654,7 @@
           "score": 0.0
         },
         "Start": 10,
-        "End": 52
+        "End": 54
       }
     ]
   },
@@ -1670,8 +1670,8 @@
           "value": "[20,30)",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 13,
+        "End": 23
       }
     ]
   },
@@ -1687,8 +1687,8 @@
           "value": "[10,15)",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 8,
+        "End": 26
       }
     ]
   },
@@ -1704,8 +1704,8 @@
           "value": "[-10,15)",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 9,
+        "End": 32
       }
     ]
   },
@@ -1722,8 +1722,8 @@
           "value": "(10,15)",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 9,
+        "End": 38
       }
     ]
   },
@@ -1739,15 +1739,15 @@
           "value": "(100,300)",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 21,
+        "End": 44
       }
     ]
   },
   {
     "Input": "هذا العدد أكبر من أو يساوي 100 و أقل من أو يساوي ثلاثمائة",
     "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "NotSupported": "javascript, python",
     "Results": [
       {
         "Text": "أكبر من أو يساوي 100 و أقل من أو يساوي ثلاثمائة",
@@ -1757,7 +1757,7 @@
           "score": 0.0
         },
         "Start": 10,
-        "End": 52
+        "End": 56
       }
     ]
   },
@@ -1774,7 +1774,7 @@
           "score": 0.0
         },
         "Start": 5,
-        "End": 35
+        "End": 33
       }
     ]
   },
@@ -1814,8 +1814,9 @@
   },
   {
     "Input": "يتراوح العدد من ألف إلى ألف وخمسمائة.",
+    "IgnoreResolution": true,
     "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "NotSupported": "javascript, python",
     "Results": [
       {
         "Text": "من ألف إلى ألف وخمسمائة",
@@ -1824,15 +1825,15 @@
           "value": "[1000,1500)",
           "score": 0.0
         },
-        "Start": 15,
-        "End": 37
+        "Start": 13,
+        "End": 35
       }
     ]
   },
   {
     "Input": "الرقم أكبر من 1000 وأقل من 1500",
     "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "NotSupported": "javascript, python",
     "Results": [
       {
         "Text": "أكبر من 1000 وأقل من 1500",
@@ -1842,7 +1843,7 @@
           "score": 0.0
         },
         "Start": 6,
-        "End": 26
+        "End": 30
       }
     ]
   },
@@ -1859,15 +1860,16 @@
           "value": "(0.25,0.5)",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 6,
+        "End": 29
       }
     ]
   },
   {
     "Input": "هذا العدد أكبر من أو يساوي ثلاثة آلاف و تسعمائة وخمسة وستين.",
+    "IgnoreResolution": true,
     "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "NotSupported": "javascript, python",
     "Results": [
       {
         "Text": "أكبر من أو يساوي ثلاثة آلاف و تسعمائة وخمسة وستين",
@@ -1877,7 +1879,7 @@
           "score": 0.0
         },
         "Start": 10,
-        "End": 54
+        "End": 58
       }
     ]
   },
@@ -1929,15 +1931,16 @@
           "value": "[30,)",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 5,
+        "End": 20
       }
     ]
   },
   {
     "Input": "هناك أكثر من 500 في هذه المنتجات.",
+    "IgnoreResolution": true,
     "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "NotSupported": "javascript, python",
     "Results": [
       {
         "Text": "أكثر من 500",
@@ -1946,8 +1949,8 @@
           "value": "[500,)",
           "score": 0.0
         },
-        "Start": 11,
-        "End": 19
+        "Start": 5,
+        "End": 15
       }
     ]
   },
@@ -1971,7 +1974,7 @@
   {
     "Input": "العثور على الأرقام الرئيسية التي هي أصغر من أو تساوي 100",
     "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "NotSupported": "javascript, python",
     "Results": [
       {
         "Text": "أصغر من أو تساوي 100",
@@ -1980,15 +1983,15 @@
           "value": "(,100]",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 36,
+        "End": 55
       }
     ]
   },
   {
     "Input": "العثور على الأرقام الأولية التي هي أقل من أو تساوي 100",
     "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "NotSupported": "javascript, python",
     "Results": [
       {
         "Text": "أقل من أو تساوي 100",
@@ -1997,8 +2000,8 @@
           "value": "(,100]",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 35,
+        "End": 53
       }
     ]
   },
@@ -2082,8 +2085,8 @@
           "value": "[170,170]",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 1,
+        "End": 9
       }
     ]
   },
@@ -2099,8 +2102,8 @@
           "value": "(10,)",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 1,
+        "End": 3
       },
       {
         "Text": "<20",
@@ -2109,8 +2112,8 @@
           "value": "(,20)",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 8,
+        "End": 10
       }
     ]
   },
@@ -2196,7 +2199,7 @@
   {
     "Input": "درجاته هي 200 أو أكثر",
     "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "NotSupported": "javascript, python",
     "Results": [
       {
         "Text": "200 أو أكثر",
@@ -2206,7 +2209,7 @@
           "score": 0.0
         },
         "Start": 10,
-        "End": 23
+        "End": 20
       }
     ]
   },
@@ -2222,8 +2225,8 @@
           "value": "(190,)",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 10,
+        "End": 20
       }
     ]
   },
@@ -2247,7 +2250,7 @@
   {
     "Input": "نقاطه أقل من أو تساوي 30",
     "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "NotSupported": "javascript, python",
     "Results": [
       {
         "Text": "أقل من أو تساوي 30",
@@ -2256,15 +2259,15 @@
           "value": "(,30]",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 6,
+        "End": 23
       }
     ]
   },
   {
     "Input": "نقاطه أكبر من أو تساوي 30",
     "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "NotSupported": "javascript, python",
     "Results": [
       {
         "Text": "أكبر من أو تساوي 30",
@@ -2273,13 +2276,14 @@
           "value": "[30,)",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 6,
+        "End": 24
       }
     ]
   },
   {
     "Input": "نقاطه تساوي 5000 أو أقل",
+    "Comment": "PendingValidation",
     "NotSupported": "javascript, python",
     "Results": [
       {
@@ -2297,7 +2301,7 @@
   {
     "Input": "نقاطه تساوي 5000 أو أقل من 6000",
     "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "NotSupported": "javascript, python",
     "Results": [
       {
         "Text": "تساوي 5000",
@@ -2306,8 +2310,8 @@
           "value": "[5000,5000]",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 6,
+        "End": 15
       },
       {
         "Text": "أقل من 6000",
@@ -2324,7 +2328,7 @@
   {
     "Input": "نقاطه تساوي 5000 أو أكثر ",
     "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "تساوي 5000 أو أكثر",
@@ -2333,15 +2337,15 @@
           "value": "[5000,)",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 6,
+        "End": 23
       }
     ]
   },
   {
     "Input": "نقاطه تساوي 5000 أو أكثر من 4500",
     "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "NotSupported": "javascript, python",
     "Results": [
       {
         "Text": "تساوي 5000",
@@ -2350,8 +2354,8 @@
           "value": "[5000,5000]",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 6,
+        "End": 15
       },
       {
         "Text": "أكثر من 4500",
@@ -2377,8 +2381,8 @@
           "value": "(,5000]",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 6,
+        "End": 25
       }
     ]
   },
@@ -2421,13 +2425,14 @@
           "value": "[6000,6000]",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 28,
+        "End": 37
       }
     ]
   },
   {
     "Input": "نقاطه تساوي 5000 أو أقل من 5000",
+    "Comment": "PendingValidation",
     "NotSupported": "javascript, python",
     "Results": [
       {
@@ -2498,8 +2503,8 @@
           "value": "[1000,5000)",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 14,
+        "End": 22
       }
     ]
   },
@@ -2584,8 +2589,8 @@
           "value": "(30,)",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 23,
+        "End": 25
       }
     ]
   },
@@ -2667,7 +2672,7 @@
   {
     "Input": "العدد هو من 200 إلى 3000000 على 2008",
     "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, java, dotnet",
+    "NotSupported": "javascript, python, java",
     "Results": [
       {
         "Text": "من 200 إلى 3000000 على 2008",
@@ -2677,7 +2682,7 @@
           "score": 0.0
         },
         "Start": 9,
-        "End": 38
+        "End": 35
       }
     ]
   },
@@ -2701,7 +2706,7 @@
   {
     "Input": "أكبر من 3000",
     "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "NotSupported": "javascript, python",
     "Results": [
       {
         "Text": "أكبر من 3000",
@@ -2711,13 +2716,14 @@
           "score": 0.0
         },
         "Start": 0,
-        "End": 9
+        "End": 11
       }
     ]
   },
   {
     "Input": "تخطط شركة نيسان موتور لخفض ما يصل إلى 700 عامل متعاقد.",
-    "NotSupported": "dotnet",
+    "IgnoreResolution": true,
+    "Comment": "PendingValidation",
     "Results": [
       {
         "Text": "يصل إلى 700",
@@ -2743,8 +2749,8 @@
           "value": "(150,)",
           "score": 0.0
         },
-        "Start": -1,
-        "End": -1
+        "Start": 29,
+        "End": 39
       }
     ]
   },
