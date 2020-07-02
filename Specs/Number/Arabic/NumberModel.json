@@ -1071,7 +1071,6 @@
   },
   {
     "Input": "اكلت خمس الفطيرة.",
-    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
     "Results": [
       {
@@ -1105,7 +1104,6 @@
   },
   {
     "Input": "مضت خمس الساعة في التنظيف.",
-    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
     "Results": [
       {
@@ -3055,8 +3053,8 @@
   },
   {
     "Input": "مائتان فاصلة صفر ثلاثة",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "مائتان فاصلة صفر ثلاثة",
@@ -3105,8 +3103,8 @@
   },
   {
     "Input": "واحد على مائة وخمس وعشرون",
-    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
+    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "واحد على مائة وخمس وعشرون",
@@ -3602,8 +3600,8 @@
   },
   {
     "Input": "مائتين فاصلة صفر ثلاثة",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "مائتين فاصلة صفر ثلاثة",
@@ -3653,8 +3651,8 @@
   },
   {
     "Input": "واحد على مائة وخمس وعشرين",
-    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
+    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "واحد على مائة وخمس وعشرين",
@@ -3954,8 +3952,8 @@
   },
   {
     "Input": "خمس وتسعون مائة على خمسة",
-    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
+    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "خمس وتسعون مائة على خمسة",
@@ -3988,8 +3986,8 @@
   },
   {
     "Input": "واحد على خمس وعشرون",
-    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
+    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "واحد على خمس وعشرون",
@@ -4005,8 +4003,8 @@
   },
   {
     "Input": "خمس وتسعون مائة على خمس",
-    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
+    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "خمس وتسعون مائة على خمس",
@@ -4073,8 +4071,8 @@
   },
   {
     "Input": "خمس وتسعين مائة على خمسة",
-    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
+    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "خمس وتسعين مائة على خمسة",
@@ -4124,8 +4122,8 @@
   },
   {
     "Input": "واحد على خمس وعشرين",
-    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
+    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "واحد على خمس وعشرين",
@@ -4157,8 +4155,8 @@
   },
   {
     "Input": "مائة على ألف وخمس",
-    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
+    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "مائة على ألف وخمس",
@@ -4174,8 +4172,8 @@
   },
   {
     "Input": "خمس وتسعين مائة على خمس",
-    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
+    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "خمس وتسعين مائة على خمس",
@@ -5081,9 +5079,9 @@
   },
   {
     "Input": "مائتين فاصلة ثلاثة من مائة",
+    "IgnoreResolution": true,
     "Comment": "PendingValidation",
     "NotSupportedByDesign": "javascript,python,java",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "مائتين فاصلة ثلاثة من مائة",
@@ -5625,7 +5623,6 @@
   },
   {
     "Input": "خمس",
-    "IgnoreResolution": true,
     "Comment": "PendingValidation",
     "NotSupportedByDesign": "javascript,python,java",
     "Results": [
@@ -5677,9 +5674,9 @@
   },
   {
     "Input": "خمس العشرون",
-    "IgnoreResolution": true,
     "Comment": "PendingValidation",
     "NotSupportedByDesign": "javascript,python,java",
+    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "خمس العشرون",
@@ -5695,9 +5692,9 @@
   },
   {
     "Input": "ثلاثة و خمس",
-    "IgnoreResolution": true,
     "Comment": "PendingValidation",
     "NotSupportedByDesign": "javascript,python,java",
+    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "ثلاثة و خمس",
@@ -5782,9 +5779,9 @@
   },
   {
     "Input": "خمس خمس العشرون",
-    "IgnoreResolution": true,
     "Comment": "PendingValidation",
     "NotSupportedByDesign": "javascript,python,java",
+    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "خمس خمس العشرون",
