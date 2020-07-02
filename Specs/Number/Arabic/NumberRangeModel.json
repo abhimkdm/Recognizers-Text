@@ -149,8 +149,8 @@
   },
   {
     "Input": "الرقم ما بين ٢٠ و١٠٠.",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "java, javascript, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "ما بين ٢٠ و١٠٠",

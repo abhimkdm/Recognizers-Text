@@ -243,7 +243,7 @@ OneNumberRangeEqualRegex: !nestedRegex
   def: '{EqualRegex}\s*(ال)?(?<number1>({NumberSplitMark}.)+)'
   references: [EqualRegex, NumberSplitMark]
 TwoNumberRangeRegex1: !nestedRegex
-  def: بين\s*(ال)?(?<number1>({NumberSplitMark}.)+)\s*و\s*(ال)?(?<number2>({NumberSplitMark}.)+)
+  def: (ما\s)?بين\s*(ال)?(?<number1>({NumberSplitMark}.)+)\s*و\s*(ال)?(?<number2>({NumberSplitMark}.)+)
   references: [NumberSplitMark]
 TwoNumberRangeRegex2: !nestedRegex
   def: ({OneNumberRangeMoreRegex1}|{OneNumberRangeMoreRegex2})\s*(،)?\s*((أ|ا)?و|لكن|,)\s*({OneNumberRangeLessRegex1}|{OneNumberRangeLessRegex2})
