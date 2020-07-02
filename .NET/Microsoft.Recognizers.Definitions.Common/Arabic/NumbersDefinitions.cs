@@ -24,7 +24,7 @@ namespace Microsoft.Recognizers.Definitions.Arabic
       public const string LangMarker = @"Ara";
       public const bool CompoundNumberLanguage = false;
       public const bool MultiDecimalSeparatorCulture = true;
-      public const string RoundNumberIntegerRegex = @"(?:مائتان|مائة|مائة|مائتين|ثلاثمائه|أربعة مئة|خمسمائة|ستمائة|سبعمائة|ثمان مائة|تسعمائة|تريليون|ترليون|آلاف|تريليونين|تريليونات|مليار|ملياري|مليارات|مليون|مليونان|ملايين|ملايين|ألف|مليونين|ألفين|مئة|الف|ومائتين|المائة|ثلاثمائة|الفين|بألفين|مئتان|الآف)";
+      public const string RoundNumberIntegerRegex = @"(?:مائتان|مائة|مائة|مائتين|ثلاثمائه|أربعة مئة|خمسمائة|ستمائة|سبعمائة|ثمان مائة|تسعمائة|تريليون|ترليون|آلاف|تريليونين|تريليونات|مليار|ملياري|مليارات|مليون|مليونان|ملايين|ملايين|ألف|مليونين|ألفين|مئة|الف|ومائتين|المائة|ثلاثمائة|(?<!((مائة)\s(\s)?))مئتان|الفين|بألفين|الآف)";
       public const string ZeroToNineIntegerRegex = @"(وخمسة|بإثنان|(و\s*)?(و\s*)?(احد)ة?|وأربعة|(و)?(اثنا)ن?|(و\s*)?(ثلاث)ة?|واربعة|(و(\s+)?)?خمس|أربعة|خمسة|اثنتين|اثنتي|وستة|ستة|وسبعة|سبعة|وثمانية|ثمانية|ثمانٍ|وتسعة|تسع|أحد|اثني|صفر|سبع|(?<!درَ)ست|اربع(ة)?|السادس|الثامنة|تسعة|(و\s*)?(اثنتا(ن)?)|اثنين|وإثنين|(و\s*)?(و\s*)?احدُ|الواحد:?)";
       public const string TwoToNineIntegerRegex = @"(?:ثلاث|ثلاثة|سبعة|ثمان|ثمانية|أربع|أربعة|خمسة|تسعة|اثنان|اثنتان|اثنين|اثتنين|اثنتان|ست|ستة)";
       public const string NegativeNumberTermsRegex = @"(?<negTerm>(سالب|ناقص)(\s+)?)";
@@ -32,14 +32,14 @@ namespace Microsoft.Recognizers.Definitions.Arabic
       public const string AnIntRegex = @"(واحد|أحد)(?=\s)";
       public const string TenToNineteenIntegerRegex = @"(?:((ثلاث|ثلاثة|سبعة|ثمان|ثمانية|اثنا|أربع|أربعة|خمسة|تسعة|اثنان|(و(\s+)?)?خمس|اثنان|اثنين|اثتنين|اثنتان|(و(\s+)?)?ستة|أحد|أربعة|إحدى|اثني)\s(عشر|عشرة)))";
       public const string TensNumberIntegerRegex = @"(و\s*)?(عشرة|عشرون|ثلاثون|أربعون|(و\s*)?(خمسون)|ستون|سبعون|ثمانون|تسعين|وعشرين|وثلاثين|وأربعين|وخمسين|وستين|سبعين|ثمانين|تسعين|عشرون|ثلاثون|أربعون|ستون|سبعون|ثمانون|تسعون|عشرين|ثلاثين|أربعين|خمسين|ستين|سبعين|ثمانين|تسعون|العشرون:?)";
-      public static readonly string SeparaIntRegex = $@"(?:((({RoundNumberIntegerRegex}\s{RoundNumberIntegerRegex})|{TenToNineteenIntegerRegex}|({ZeroToNineIntegerRegex}(((و)?)\s+(و)?|\s*-\s*){TensNumberIntegerRegex})|{TensNumberIntegerRegex}|{ZeroToNineIntegerRegex}|{RoundNumberIntegerRegex})(\s+{RoundNumberIntegerRegex})*))|(((\s+{RoundNumberIntegerRegex})+))";
+      public static readonly string SeparaIntRegex = $@"(?:(((({RoundNumberIntegerRegex})\s{RoundNumberIntegerRegex})|{TenToNineteenIntegerRegex}|({ZeroToNineIntegerRegex}(((و)?)\s+(و)?|\s*-\s*){TensNumberIntegerRegex})|{TensNumberIntegerRegex}|{ZeroToNineIntegerRegex}|({RoundNumberIntegerRegex}))(\s+{RoundNumberIntegerRegex})*))|(((\s+{RoundNumberIntegerRegex})+))";
       public static readonly string AllIntRegex = $@"(?:({SeparaIntRegex})((\s+(و)?)({SeparaIntRegex})(\s+{RoundNumberIntegerRegex})?)*|((({TenToNineteenIntegerRegex}|({TensNumberIntegerRegex}(\s+(و)?|\s*-\s*){ZeroToNineIntegerRegex})|{TensNumberIntegerRegex}|{ZeroToNineIntegerRegex})?(\s+{RoundNumberIntegerRegex})+)\s+(و)?)*{SeparaIntRegex})";
       public const string PlaceHolderPureNumber = @"\b";
       public const string PlaceHolderDefault = @"\D|\b";
       public static readonly Func<string, string> NumbersWithSpace = (placeholder) => $@"((((?<!\d+\s*)-\s*)|((?<=\b)(?<!(\d+\.|\d+,))))(\d{{1,3}})(((\s)+(\d{{1,3}})))+)(?={placeholder})";
       public static readonly Func<string, string> NumbersWithPlaceHolder = (placeholder) => $@"(((?<!\d+\s*)([-]\s*)?)|(?<=\b))\d+(?!([\.،,]\d+[\u0621-\u064A]))(?={placeholder})";
       public static readonly string NumbersWithSuffix = $@"(((?<!\d+\s*)([-]\s*)?)|(?<=\b))\d+\s*{BaseNumbers.NumberMultiplierRegex}(?=\b)";
-      public static readonly string RoundNumberIntegerRegexWithLocks = $@"(?<=\b)(\d+\s*({RoundNumberIntegerRegex})(\s|و\s|\sو))?\d+(\s|و\s|\sو)+{RoundNumberIntegerRegex}((\s*و\s*)+\d+)?(?=\b)";
+      public static readonly string RoundNumberIntegerRegexWithLocks = $@"(?<=\b)(\s*\d+\s*({RoundNumberIntegerRegex})(\s|و\s|\sو))?\d+(\s|و\s|\sو)+{RoundNumberIntegerRegex}((\s*و\s*)+(?![0٠])\d+(?!([,.]\d+)))?(?=\b)";
       public const string NumbersWithDozenSuffix = @"(((?<!\d+\s*)([-]\s*)?)|(?<=\b))(\d+\s+)?(دستة|دستات|دست|دزينة|دزينات|دزينتين)(?=\b)";
       public static readonly string AllIntRegexWithLocks = $@"((?<=\b){AllIntRegex}(?=\b))";
       public static readonly string AllIntRegexWithDozenSuffixLocks = $@"(?<=\b)(((نصف\s+)(دزينة|دستة|دستات|دست|دزينات|دزينتين))|({AllIntRegex}(و)?\s+((و)?))(دزينة|دستة|دستات|دست|دزينات|دزينتين))(?=\b)";
@@ -65,7 +65,7 @@ namespace Microsoft.Recognizers.Definitions.Arabic
       public static readonly string FractionWithOrdinalPrefix = $@"({AllOrdinalRegex})(?=\s*({FractionOrdinalPrefix}))";
       public static readonly string FractionWithPartOfPrefix = $@"((جزء من)\s+)({AllIntRegexWithLocks})";
       public static readonly string AllPointRegex = $@"((\s+{ZeroToNineIntegerRegex})+|(\s+{SeparaIntRegex}))";
-      public static readonly string AllFloatRegex = $@"{AllIntRegex}(\s+(نقطة|جزء|جزء من)){AllPointRegex}";
+      public static readonly string AllFloatRegex = $@"{AllIntRegex}(\s+(فاصلة|نقطة|جزء|جزء من)){AllPointRegex}";
       public static readonly string DoubleWithMultiplierRegex = $@"(((?<!\d+\s*)([-]\s*)?)|((?<=\b)(?<!\d+[\.,])))\d+[\.,]\d+\s*{BaseNumbers.NumberMultiplierRegex}(?=\b)";
       public const string DoubleExponentialNotationRegex = @"(((?<!\d+\s*)([-]\s*)?)|((?<=\b)(?<!\d+[\.,])))(\d+([\.,]\d+)?)e[+-]*((\d+[\.,])?\d+)(?=\b)";
       public const string DoubleCaretExponentialNotationRegex = @"(((?<!\d+\s*)([-]\s*)?)|((?<=\b)(?<!\d+[\.,])))(\d+([\.,]\d+)?)[+-]*\^[+-]*((\d+[\.,])?\d+)(?=\b)";
