@@ -25,7 +25,7 @@ namespace Microsoft.Recognizers.Definitions.Arabic
       public const bool CompoundNumberLanguage = false;
       public const bool MultiDecimalSeparatorCulture = true;
       public const string RoundNumberIntegerRegex = @"(?:مائتان|مائة|مائة|مائتين|ثلاثمائه|أربعة مئة|خمسمائة|ستمائة|سبعمائة|ثمان مائة|تسعمائة|تريليون|ترليون|آلاف|تريليونين|تريليونات|مليار|ملياري|مليارات|مليون|مليونان|ملايين|ملايين|ألف|مليونين|ألفين|مئة|الف|ومائتين|المائة|ثلاثمائة|الفين|بألفين|مئتان|الآف)";
-      public const string ZeroToNineIntegerRegex = @"(وخمسة|بإثنان|(و\s*)?(و\s*)?(احد)ة?|وأربعة|(و)?(اثنا)ن?|(و\s*)?(ثلاث)ة?|واربعة|أربعة|خمسة|اثنتي|وستة|ستة|وسبعة|سبعة|وثمانية|ثمانية|ثمانٍ|وتسعة|تسع|أحد|اثني|صفر|سبع|(?<!درَ)ست|اربع(ة)?|السادس|الثامنة|تسعة|(و\s*)?(اثنتا(ن)?)|اثنين|وإثنين|(و\s*)?(و\s*)?احدُ|الواحد:?)";
+      public const string ZeroToNineIntegerRegex = @"(وخمسة|بإثنان|(و\s*)?(و\s*)?(احد)ة?|وأربعة|(و)?(اثنا)ن?|(و\s*)?(ثلاث)ة?|واربعة|أربعة|خمسة|اثنتين|اثنتي|وستة|ستة|وسبعة|سبعة|وثمانية|ثمانية|ثمانٍ|وتسعة|تسع|أحد|اثني|صفر|سبع|(?<!درَ)ست|اربع(ة)?|السادس|الثامنة|تسعة|(و\s*)?(اثنتا(ن)?)|اثنين|وإثنين|(و\s*)?(و\s*)?احدُ|الواحد:?)";
       public const string TwoToNineIntegerRegex = @"(?:ثلاث|ثلاثة|سبعة|ثمان|ثمانية|أربع|أربعة|خمسة|تسعة|اثنان|اثنتان|اثنين|اثتنين|اثنتان|ست|ستة)";
       public const string NegativeNumberTermsRegex = @"(?<negTerm>(سالب|ناقص)(\s+)?)";
       public static readonly string NegativeNumberSignRegex = $@"^{NegativeNumberTermsRegex}.*";
@@ -122,6 +122,8 @@ namespace Microsoft.Recognizers.Definitions.Arabic
             { @"صفر", 0 },
             { @"اثنتان", 2 },
             { @"اثنان", 2 },
+            { @"اثنتي", 2 },
+            { @"اثنتين", 2 },
             { @"اثنين", 2 },
             { @"ثلاث", 3 },
             { @"ثلاثة", 3 },
