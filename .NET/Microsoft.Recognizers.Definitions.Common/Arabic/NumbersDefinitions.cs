@@ -25,12 +25,12 @@ namespace Microsoft.Recognizers.Definitions.Arabic
       public const bool CompoundNumberLanguage = false;
       public const bool MultiDecimalSeparatorCulture = true;
       public const string RoundNumberIntegerRegex = @"(?:مائتان|مائة|مائة|مائتين|ثلاثمائه|أربعة مئة|خمسمائة|ستمائة|سبعمائة|ثمان مائة|تسعمائة|تريليون|ترليون|آلاف|تريليونين|تريليونات|مليار|ملياري|مليارات|مليون|مليونان|ملايين|ملايين|ألف|مليونين|ألفين|مئة|الف|ومائتين|المائة|ثلاثمائة|(?<!((مائة)\s(\s)?))مئتان|الفين|بألفين|الآف)";
-      public const string ZeroToNineIntegerRegex = @"(وخمسة|بإثنان|(و\s*)?(و\s*)?(احد)ة?|وأربعة|(و)?(اثنا)ن?|(و\s*)?(ثلاث)ة?|واربعة|(و(\s+)?)?خمس|أربعة|خمسة|اثنتين|اثنتي|وستة|ستة|وسبعة|سبعة|وثمانية|ثمانية|ثمانٍ|وتسعة|تسع|أحد|اثني|صفر|سبع|(?<!درَ)ست|اربع(ة)?|السادس|الثامنة|تسعة|(و\s*)?(اثنتا(ن)?)|اثنين|وإثنين|(و\s*)?(و\s*)?احدُ|الواحد:?)";
+      public const string ZeroToNineIntegerRegex = @"(وخمسة|بإثنان|(و\s*)?(و\s*)?(احد)ة?|وأربعة|(و)?(اثنا)ن?|(و\s*)?(ثلاث)ة?|واربعة|أربعة|خمسة|اثنتين|اثنتي|(و\s*)?ستة|وسبعة|سبعة|وثمانية|ثمانية|ثمانٍ|وتسعة|تسع|أحد|اثني|صفر|سبع|(?<!درَ)ست|اربع(ة)?|السادس|الثامنة|تسعة|(?<!((على)\s))((و(\s)?)?(خمس(?!\sال)))|(و\s*)?(اثنتا(ن)?)|اثنين|وإثنين|(و\s*)?(و\s*)?احدُ|الواحد:?)";
       public const string TwoToNineIntegerRegex = @"(?:ثلاث|ثلاثة|سبعة|ثمان|ثمانية|أربع|أربعة|خمسة|تسعة|اثنان|اثنتان|اثنين|اثتنين|اثنتان|ست|ستة)";
       public const string NegativeNumberTermsRegex = @"(?<negTerm>(سالب|ناقص)(\s+)?)";
       public static readonly string NegativeNumberSignRegex = $@"^{NegativeNumberTermsRegex}.*";
       public const string AnIntRegex = @"(واحد|أحد)(?=\s)";
-      public const string TenToNineteenIntegerRegex = @"(?:((ثلاث|ثلاثة|سبعة|ثمان|ثمانية|اثنا|أربع|أربعة|خمسة|تسعة|اثنان|(و(\s+)?)?خمس|اثنان|اثنين|اثتنين|اثنتان|(و(\s+)?)?ستة|أحد|أربعة|إحدى|اثني)\s(عشر|عشرة)))";
+      public const string TenToNineteenIntegerRegex = @"(?:((ثلاث|ثلاثة|سبعة|ثمان|ثمانية|اثنا|أربع|أربعة|(?<!((على)\s))((و(\s)?)?(خمس(?!\sال)))|خمسة|تسعة|اثنان|اثنان|اثنين|اثتنين|اثنتان|(و\s*)?ستة|أحد|أربعة|إحدى|اثني)\s(عشر|عشرة)))";
       public const string TensNumberIntegerRegex = @"(و\s*)?(عشرة|عشرون|ثلاثون|أربعون|(و\s*)?(خمسون)|ستون|سبعون|ثمانون|تسعين|وعشرين|وثلاثين|وأربعين|وخمسين|وستين|سبعين|ثمانين|تسعين|عشرون|ثلاثون|أربعون|ستون|سبعون|ثمانون|تسعون|عشرين|ثلاثين|أربعين|خمسين|ستين|سبعين|ثمانين|تسعون|العشرون:?)";
       public static readonly string SeparaIntRegex = $@"(?:(((({RoundNumberIntegerRegex})\s{RoundNumberIntegerRegex})|{TenToNineteenIntegerRegex}|({ZeroToNineIntegerRegex}(((و)?)\s+(و)?|\s*-\s*){TensNumberIntegerRegex})|{TensNumberIntegerRegex}|{ZeroToNineIntegerRegex}|({RoundNumberIntegerRegex}))(\s+{RoundNumberIntegerRegex})*))|(((\s+{RoundNumberIntegerRegex})+))";
       public static readonly string AllIntRegex = $@"(?:({SeparaIntRegex})((\s+(و)?)({SeparaIntRegex})(\s+{RoundNumberIntegerRegex})?)*|((({TenToNineteenIntegerRegex}|({TensNumberIntegerRegex}(\s+(و)?|\s*-\s*){ZeroToNineIntegerRegex})|{TensNumberIntegerRegex}|{ZeroToNineIntegerRegex})?(\s+{RoundNumberIntegerRegex})+)\s+(و)?)*{SeparaIntRegex})";
@@ -60,8 +60,8 @@ namespace Microsoft.Recognizers.Definitions.Arabic
       public const string FractionOrdinalPrefix = @"(الوزن|المحتوى:?)";
       public static readonly string FractionNounRegex = $@"(?<=\b){ArabicBuiltInFraction}|{AllIntRegex}\s(و\s|و){ArabicBuiltInFraction}|(({AllIntRegex}\s(و\s|و)?)?({AllIntRegex})(\s+|\s*)(({AllOrdinalRegex})|({RoundNumberOrdinalRegex})|أرباع|وربع|ارباع|واحد وربع|نصف|ربع|أنصاف|ربعين|أرباع|ارباع))(?=\b)";
       public static readonly string FractionNounWithArticleRegex = $@"(?<=\b)((({AllIntRegex}(\s|(\s*-\s*)|و\s+)?)(({AllOrdinalRegex})|{NumberOrdinalRegex}(\sو\s*خمس)?|نصف|(و?)\s*ربع|ونصف|ثمن|(و\s*)?(ثلثين|ثلث)))|(و ربع|الربع|النصف|نصف|))(?=\b)";
-      public static readonly string FractionPrepositionRegex = $@"(?<!{BaseNumbers.CommonCurrencySymbol}\s*)(?<=\b)(?<numerator>({AllIntRegex})|((?<![\.,])\d+))\s+(فوق|على|في|جزء|من|أجزاء من|اجزاء من|جزء من)\s+(?<denominator>({AllIntRegex})|(و\s*)?{ArabicBuiltInFraction}|(\d+)(?![\.,]))(?=\b)";
-      public static readonly string FractionPrepositionWithinPercentModeRegex = $@"(?<!{BaseNumbers.CommonCurrencySymbol}\s*)(?<=\b)(?<numerator>({AllIntRegex})|((?<![\.,])\d+))\s+على\s+(?<denominator>({AllIntRegex})|(و\s*)?{ArabicBuiltInFraction}|(\d+)(?![\.,]))(?=\b)";
+      public static readonly string FractionPrepositionRegex = $@"(?<!{BaseNumbers.CommonCurrencySymbol}\s*)(?<=\b)(?<numerator>({AllIntRegex})|((?<![\.,])\d+))\s+(فوق|على|في|جزء|من|أجزاء من|اجزاء من|جزء من)\s+(?<denominator>(({ArabicBuiltInFraction}((\s*(و)?\s*)))?{AllIntRegex})|(و\s*)?{ArabicBuiltInFraction}|(\d+)(?![\.,]))(?=\b)";
+      public static readonly string FractionPrepositionWithinPercentModeRegex = $@"(?<!{BaseNumbers.CommonCurrencySymbol}\s*)(?<=\b)(?<numerator>({AllIntRegex})|((?<![\.,])\d+))\s+على\s+(?<denominator>((({ArabicBuiltInFraction}((\s*(و)?\s*)))?{AllIntRegex}))|(و\s*)?{ArabicBuiltInFraction}|(\d+)(?![\.,]))(?=\b)";
       public static readonly string FractionWithOrdinalPrefix = $@"({AllOrdinalRegex})(?=\s*({FractionOrdinalPrefix}))";
       public static readonly string FractionWithPartOfPrefix = $@"((جزء من)\s+)({AllIntRegexWithLocks})";
       public static readonly string AllPointRegex = $@"((\s+{ZeroToNineIntegerRegex})+|(\s+{SeparaIntRegex}))";
@@ -79,8 +79,8 @@ namespace Microsoft.Recognizers.Definitions.Arabic
       public static readonly string NumberWithPrefixPercentage = $@"(نسبة|بالمائة)(\s*)({BaseNumbers.NumberReplaceToken})";
       public static readonly string NumberWithPrepositionPercentage = $@"({BaseNumbers.NumberReplaceToken})\s*(في|خارج\s+من)\s*({BaseNumbers.NumberReplaceToken})";
       public const string TillRegex = @"(الى|إلى|خلال|--|-|—|——|~|–)";
-      public const string MoreRegex = @"(?:(اكثر|فوق|أكبر|أعظم|أطول|يتجاوز|تفوق|أعلى|أكثر)|(?<!<|=)>)";
-      public const string LessRegex = @"(?:(أقل|اقل|اصغر|أصغر|أخفض|ادنى|يصل إلى)(\s*من)?|تحت|(?<!>|=)<)";
+      public const string MoreRegex = @"(?:(اكثر|فوق|أكبر|أعظم|أطول|تجاوز|يتجاوز|تفوق|أعلى|أكثر|على الأقل)|(?<!<|=)>)";
+      public const string LessRegex = @"(?:(على الأكثر|أقل|اقل|اصغر|أصغر|أخفض|ادنى|يصل إلى)(\s*من)?|تحت|(?<!>|=)<)";
       public const string EqualRegex = @"(يساوي|تساوي| تساوي|(?<!<|>)=)";
       public static readonly string MoreOrEqualPrefix = $@"(((ليس|لا)\s+{LessRegex})|(على\s+الأقل))";
       public static readonly string MoreOrEqual = $@"(?:(({MoreRegex}(\s+من)?)\s+(أو|او)?\s+{EqualRegex})|(({MoreOrEqualPrefix}|(تفوق))(\s+(أو|او)?\s+{EqualRegex})?)|(({EqualRegex}\s+(أو|او)?\s+)?({MoreOrEqualPrefix}|تفوق))|>\s*=)";
@@ -100,7 +100,7 @@ namespace Microsoft.Recognizers.Definitions.Arabic
       public static readonly string OneNumberRangeLessRegex2 = $@"(?<number2>({NumberSplitMark}.)+)\s*{LessOrEqualSuffix}";
       public static readonly string OneNumberRangeLessSeparateRegex = $@"({EqualRegex}\s+(?<number1>({NumberSplitMark}.)+)\s*(أو|او)\s+{LessRegexNoNumberSucceed})|(((((أقل|اقل|أدنى|اصغر|أصغر|ادنى)(\s+من))|تحت|(?<!>|=)<))\s+(?<number1>({NumberSplitMark}.)+)(\s+(أو|او)\s+){EqualRegexNoNumberSucceed})";
       public static readonly string OneNumberRangeEqualRegex = $@"{EqualRegex}\s*(ال)?(?<number1>({NumberSplitMark}.)+)";
-      public static readonly string TwoNumberRangeRegex1 = $@"بين\s*(ال)?(?<number1>({NumberSplitMark}.)+)\s*و\s*(ال)?(?<number2>({NumberSplitMark}.)+)";
+      public static readonly string TwoNumberRangeRegex1 = $@"(ما\s)?بين\s*(ال)?(?<number1>({NumberSplitMark}.)+)\s*و\s*(ال)?(?<number2>({NumberSplitMark}.)+)";
       public static readonly string TwoNumberRangeRegex2 = $@"({OneNumberRangeMoreRegex1}|{OneNumberRangeMoreRegex2})\s*(،)?\s*((أ|ا)?و|لكن|,)\s*({OneNumberRangeLessRegex1}|{OneNumberRangeLessRegex2})";
       public static readonly string TwoNumberRangeRegex3 = $@"({OneNumberRangeLessRegex1}|{OneNumberRangeLessRegex2})\s*(،)?\s*((أ|ا)?و|لكن|,)\s*({OneNumberRangeMoreRegex1}|{OneNumberRangeMoreRegex2})";
       public static readonly string TwoNumberRangeRegex4 = $@"((من\s)(?<number1>({NumberSplitMark}(?!\bمن\b).)+)\s*{TillRegex}\s*(ال\s+)?(?<number2>({NumberSplitMark}.)+))|((من\s)?(?<number1>({NumberSplitMark}(?!\bمن\b).)+)\s*{TillRegex}\s*(ال\s+)?(?<number2>({NumberSplitMark}.)+))";
