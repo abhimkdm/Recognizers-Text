@@ -1071,7 +1071,6 @@
   },
   {
     "Input": "اكلت خمس الفطيرة.",
-    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
     "Results": [
       {
@@ -1105,7 +1104,6 @@
   },
   {
     "Input": "مضت خمس الساعة في التنظيف.",
-    "IgnoreResolution": true,
     "NotSupportedByDesign": "javascript, java, python",
     "Results": [
       {
@@ -5677,9 +5675,8 @@
   },
   {
     "Input": "خمس العشرون",
-    "IgnoreResolution": true,
-    "Comment": "PendingValidation",
     "NotSupportedByDesign": "javascript,python,java",
+    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "خمس العشرون",
@@ -5782,9 +5779,9 @@
   },
   {
     "Input": "خمس خمس العشرون",
-    "IgnoreResolution": true,
     "Comment": "PendingValidation",
     "NotSupportedByDesign": "javascript,python,java",
+    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "خمس خمس العشرون",
