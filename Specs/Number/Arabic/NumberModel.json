@@ -5356,9 +5356,9 @@
   },
   {
     "Input": "واحد و نصف",
+    "IgnoreResolution": true,
     "Comment": "PendingValidation",
     "NotSupportedByDesign": "javascript,python,java",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "واحد و نصف",
