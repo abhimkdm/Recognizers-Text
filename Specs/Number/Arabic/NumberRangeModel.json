@@ -384,8 +384,8 @@
   },
   {
     "Input": "أوجد الأرقان الأولية الذي تكون <=١٠٠",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "java, javascript, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "<=١٠٠",
@@ -393,7 +393,7 @@
         "Resolution": {
           "value": "(,100]"
         },
-        "Start": 30,
+        "Start": 31,
         "End": 35
       }
     ]
