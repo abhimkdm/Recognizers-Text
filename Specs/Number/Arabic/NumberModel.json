@@ -5675,6 +5675,7 @@
   },
   {
     "Input": "خمس العشرون",
+    "Comment": "PendingValidation",
     "NotSupportedByDesign": "javascript,python,java",
     "NotSupported": "dotnet",
     "Results": [
