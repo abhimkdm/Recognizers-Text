@@ -5046,7 +5046,6 @@
     "Input": "مائتان و اثنان ألف",
     "Comment": "PendingValidation",
     "NotSupportedByDesign": "javascript,python,java",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "مائتان و اثنان ألف",
