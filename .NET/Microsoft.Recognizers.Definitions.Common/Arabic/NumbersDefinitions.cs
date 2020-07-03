@@ -79,7 +79,7 @@ namespace Microsoft.Recognizers.Definitions.Arabic
       public static readonly string NumberWithPrefixPercentage = $@"(نسبة|بالمائة)(\s*)({BaseNumbers.NumberReplaceToken})";
       public static readonly string NumberWithPrepositionPercentage = $@"({BaseNumbers.NumberReplaceToken})\s*(في|خارج\s+من)\s*({BaseNumbers.NumberReplaceToken})";
       public const string TillRegex = @"(الى|إلى|خلال|--|-|—|——|~|–)";
-      public const string MoreRegex = @"(?:(اكثر|فوق|أكبر|أعظم|أطول|تجاوز|يتجاوز|تفوق|أعلى|أكثر|على الأقل)|(?<!<|=)>)";
+      public const string MoreRegex = @"(?:(اكثر|فوق|أكبر|أعظم|أطول|((ي)?تجاوز)|تفوق|أعلى|أكثر|على الأقل)|(?<!<|=)>)";
       public const string LessRegex = @"(?:(على الأكثر|أقل|اقل|اصغر|أصغر|أخفض|ادنى|يصل إلى)(\s*من)?|تحت|(?<!>|=)<)";
       public const string EqualRegex = @"(يساوي|تساوي| تساوي|(?<!<|>)=)";
       public static readonly string MoreOrEqualPrefix = $@"(((ليس|لا)\s+{LessRegex})|(على\s+الأقل))";
