@@ -1623,8 +1623,8 @@
   },
   {
     "Input": "هو تجاوز ٣٠٠٠ سجل هذا العام",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "java, javascript, python",
-    "NotSupported": "dotnet",
     "Results": [
       {
         "Text": "تجاوز ٣٠٠٠",
