@@ -384,6 +384,7 @@
   },
   {
     "Input": "أوجد الأرقان الأولية الذي تكون <=١٠٠",
+    "IgnoreResolution": true,
     "NotSupportedByDesign": "java, javascript, python",
     "Results": [
       {
