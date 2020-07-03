@@ -175,9 +175,9 @@ NumberWithPrepositionPercentage: !nestedRegex
 TillRegex: !simpleRegex
   def: (الى|إلى|خلال|--|-|—|——|~|–)
 MoreRegex: !simpleRegex
-  def: (?:(اكثر|فوق|أكبر|أعظم|أطول|((ي)?تجاوز)|تفوق|أعلى|أكثر|على الأقل)|(?<!<|=)>)
+  def: (?:(يزيد|اكثر|فوق|أكبر|أعظم|أطول|((ي)?تجاوز)|تفوق|أعلى|أكثر|على الأقل)|(?<!<|=)>)
 LessRegex: !simpleRegex
-  def: (?:(على الأكثر|أقل|اقل|اصغر|أصغر|أخفض|ادنى|يصل إلى)(\s*من)?|تحت|(?<!>|=)<)
+  def: (?:(على الأكثر|أقل|تقل|اقل|اصغر|أصغر|أخفض|ادنى|يصل إلى)(\s*من)?|تحت|(?<!>|=)<)
 EqualRegex: !simpleRegex
   def: (يساوي|تساوي| تساوي|(?<!<|>)=)
 MoreOrEqualPrefix: !nestedRegex

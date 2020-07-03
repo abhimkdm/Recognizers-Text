@@ -1760,8 +1760,9 @@
   },
   {
     "Input": "هناك على الأكثر 100 و على الأقل 20 تفاحة.",
+    "IgnoreResolution": true,
     "Comment": "PendingValidation",
-    "NotSupported": "javascript, python, dotnet",
+    "NotSupported": "javascript, python",
     "Results": [
       {
         "Text": "على الأكثر 100 و على الأقل 20",
